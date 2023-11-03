@@ -1,5 +1,5 @@
 #include "Fixed.hpp"
-#include <iostream>
+#include <ostream>
 
 Fixed::Fixed(): number(0){
 	std::cout << "Default Fixed constructor " << std::endl;
@@ -8,6 +8,14 @@ Fixed::Fixed(): number(0){
 Fixed::Fixed(const Fixed &inst){
 	std::cout << "Copy Fixed constructor " << std::endl;
 	*this = inst;
+}
+
+Fixed::Fixed(const int value){
+	this->number = value * (1 << this->bits);
+}
+
+Fixed::Fixed(const float value){
+	this->number = value * (1 << this->bits);
 }
 
 Fixed::~Fixed(){
@@ -30,4 +38,17 @@ int Fixed::getRawBits() const{
 void Fixed::setRawBits(int const raw){
 	std::cout << "setRawBits called" << std::endl;
 	this->number = raw;
+}
+
+float Fixed::toFloat() const{
+	return ((float)this->number / (1 << this->bits));
+}
+
+int Fixed::toInt() const{
+	return ((int)this->number / (1 << this->bits));
+}
+
+std::ostream &operator<<(std::ostream &o, Fixed const &inst){
+	o << inst.toFloat();
+	return o;
 }
