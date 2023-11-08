@@ -3,11 +3,11 @@
 #include <ostream>
 
 Fixed::Fixed(): number(0){
-	// std::cout << "Default Fixed constructor " << std::endl;
+	std::cout << "Default Fixed constructor " << std::endl;
 }
 
 Fixed::Fixed(const Fixed &inst){
-	// std::cout << "Copy Fixed constructor " << std::endl;
+	std::cout << "Copy Fixed constructor " << std::endl;
 	*this = inst;
 }
 
@@ -20,7 +20,7 @@ Fixed::Fixed(const float value){
 }
 
 Fixed::~Fixed(){
-	// std::cout << "Fixed destructor" << std::endl;
+	std::cout << "Fixed destructor" << std::endl;
 }
 
 Fixed& Fixed::operator=(const Fixed &rhs){
@@ -47,39 +47,27 @@ int Fixed::toInt() const{
 }
 
 bool Fixed::operator<(const Fixed &rhs) const{
-	if (this->number < rhs.getRawBits())
-		return true;
-	return false;
+	return (this->number < rhs.getRawBits());
 }
 
 bool Fixed::operator>(const Fixed &rhs) const{
-	if (this->number > rhs.getRawBits())
-		return true;
-	return false;
+	return (this->number > rhs.getRawBits());
 }
 
 bool Fixed::operator<=(const Fixed &rhs) const{
-	if (this->number <= rhs.getRawBits())
-		return true;
-	return false;
+	return (this->number <= rhs.getRawBits());
 }
 
 bool Fixed::operator>=(const Fixed &rhs) const{
-	if (this->number >= rhs.getRawBits())
-		return true;
-	return false;
+	return (this->number >= rhs.getRawBits());
 }
 
 bool Fixed::operator==(const Fixed &rhs) const{
-	if (this->number == rhs.getRawBits())
-		return true;
-	return false;
+	return (this->number == rhs.getRawBits());
 }
 
 bool Fixed::operator!=(const Fixed &rhs) const{
-	if (this->number != rhs.getRawBits())
-		return true;
-	return false;
+	return (this->number != rhs.getRawBits());
 }
 
 Fixed Fixed::operator+(const Fixed &rhs) const{
@@ -133,27 +121,19 @@ Fixed Fixed::operator--(int){
 }
 
 Fixed &Fixed::min(Fixed &nb1, Fixed &nb2){
-	if (nb1 < nb2)
-		return nb1;
-	return nb2;
+	return ((nb1 < nb2) ? nb1 : nb2);
 }
 
 Fixed &Fixed::max(Fixed &nb1, Fixed &nb2){
-	if (nb1 > nb2)
-		return nb1;
-	return nb2;
+	return (nb1 > nb2) ? nb1 : nb2;
 }
 
 const Fixed &Fixed::min(Fixed const &nb1, Fixed const &nb2){
-	if (nb1 < nb2)
-		return nb1;
-	return nb2;
+	return (nb1 < nb2) ? nb1 : nb2;
 }
 
 const Fixed &Fixed::max(Fixed const &nb1, Fixed const &nb2){
-	if (nb1 > nb2)
-		return nb1;
-	return nb2;
+	return (nb1 > nb2) ? nb1 : nb2;
 }
 
 std::ostream &operator<<(std::ostream &o, Fixed const &inst){

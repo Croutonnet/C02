@@ -13,8 +13,8 @@ Weapon::~Weapon() {
 	std::cout << "Weapon destructor called" << std::endl;
 }
 
-void Weapon::setType(std::string type){
-	this->type = type;
+void Weapon::setType(std::string str){
+	this->type = str;
 }
 
 const std::string &Weapon::getType(){

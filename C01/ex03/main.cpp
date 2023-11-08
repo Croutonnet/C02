@@ -1,6 +1,7 @@
 #include "Weapon.hpp"
 #include "HumanA.hpp"
 #include "HumanB.hpp"
+#include <cstddef>
 
 int main()
 {
@@ -17,6 +18,10 @@ int main()
 		jim.setWeapon(club);
 		jim.attack();
 		club.setType("some other type of club");
+		jim.attack();
+	}
+	{
+		HumanB jim("Jim");
 		jim.attack();
 	}
 	return 0;

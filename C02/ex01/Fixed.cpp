@@ -41,11 +41,11 @@ void Fixed::setRawBits(int const raw){
 }
 
 float Fixed::toFloat() const{
-	return ((float)this->number / (1 << this->bits));
+	return ((float)this->number / (float)(1 << this->bits));
 }
 
 int Fixed::toInt() const{
-	return ((int)this->number / (1 << this->bits));
+	return ((int)this->number >> this->bits);
 }
 
 std::ostream &operator<<(std::ostream &o, Fixed const &inst){

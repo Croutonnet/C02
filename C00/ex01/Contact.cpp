@@ -13,6 +13,7 @@ Contact::Contact(std::string fn, std::string ln, std::string nn, std::string pn,
 }
 
 Contact::~Contact(){
+	std:: cout << "Destructor called" << std::endl;
 }
 
 const std::string Contact::GetFirstName(void){
