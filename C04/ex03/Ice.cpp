@@ -1,7 +1,8 @@
 #include "Ice.hpp"
+#include "AMateria.hpp"
 #include "ICharacter.hpp"
 
-Ice::Ice(){
+Ice::Ice() : AMateria("ice"){
 	std::cout << "Ice Constructor called" << std::endl;
 }
 
@@ -9,14 +10,13 @@ Ice::~Ice(){
 	std::cout << "Ice Destructor called" << std::endl;
 }
 
-Ice::Ice(const Ice &inst){
+Ice::Ice(const Ice &inst) : AMateria(inst){
 	std::cout << "Copy Ice Called" << std::endl;
 	*this = inst;
 }
 
 Ice &Ice::operator=(const Ice &rhs){
-	if (this != &rhs){
-	}
+	(void) rhs;
 	return *this;
 }
 
@@ -26,6 +26,6 @@ AMateria *Ice::clone() const{
 }
 
 void Ice::use(ICharacter &target){
-	std::cout << "Shoots Iceball to " << target.getName() << std::endl;
+	std::cout << "*Shoots Iceball at " << target.getName() << "*" << std::endl;
 }
 

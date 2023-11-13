@@ -1,5 +1,4 @@
 #include "Character.hpp"
-#include <malloc/_malloc.h>
 
 Character::Character(){
 	std::cout << "Default Character Constructor Called" << std::endl;
@@ -11,6 +10,11 @@ Character::Character(std::string name): name(name){
 
 Character::~Character(){
 	std::cout << "Default Character Destructor Called" << std::endl;
+	free_inventory();
+	for (int i = 0; i < 50; i++){
+		if (this->floor[i])
+			delete floor[i];
+	}
 }
 
 Character::Character(const Character &inst){
@@ -44,13 +48,13 @@ std::string const &Character::getName() const{
 }
 
 void Character::equip(AMateria *m){
-	std::cout << "uwu " << m->getType() << std::endl;
 	for (int i = 0; i < 4; i++){
 		if (this->inventory[i] == NULL){
 			this->inventory[i] = m;
 			return;
 		}
 	}
+	std::cout << "Inventory is full" << std::endl;
 }
 
 void Character::unequip(int idx){

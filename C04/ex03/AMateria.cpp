@@ -5,9 +5,8 @@ AMateria::AMateria(){
 	std::cout << "Default AMateria constructor " << std::endl;
 }
 
-AMateria::AMateria(std::string const &type){
+AMateria::AMateria(std::string const &type) : type(type){
 	std::cout << "AMateria with string Constructor called" << std::endl;
-	this->type = type;
 }
 
 AMateria::~AMateria(){
@@ -20,8 +19,9 @@ AMateria::AMateria(const AMateria &inst){
 }
 
 AMateria& AMateria::operator=(const AMateria &rhs){
-	std::cout << "AMateria operator = overide" << std::endl;
+	// std::cout << "AMateria operator = overide" << std::endl;
 	if (this != &rhs){
+		this->type = rhs.type;
 	}
 	return *this;
 }
@@ -31,5 +31,5 @@ std::string const &AMateria::getType()const{
 }
 
 void AMateria::use(ICharacter &target){
-	std::cout << "AMateria template used on " << target.getName() << ". HOW?" << std::endl;
+	std::cout << "*AMateria template used on " << target.getName() << ". HOW?*" << std::endl;
 }

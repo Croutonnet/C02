@@ -15,8 +15,7 @@ MateriaSource::MateriaSource(const MateriaSource &inst){
 }
 
 MateriaSource &MateriaSource::operator=(const MateriaSource &rhs){
-	if (this != &rhs){
-	}
+	(void) rhs;
 	return *this;
 }
 
@@ -32,7 +31,7 @@ void MateriaSource::learnMateria(AMateria *mat){
 
 AMateria *MateriaSource::createMateria(std::string const &type){
 	for (int i = 0; i < 4; i++){
-		if (this->book[i] && this->type == type){
+		if (this->book[i] && this->book[i]->getType() == type){
 			return this->book[i]->clone();
 		}
 	}
