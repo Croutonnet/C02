@@ -17,7 +17,7 @@ ScavTrap::ScavTrap(string name) : ClapTrap(name), gateKeeper(false){
 }
 
 ScavTrap::~ScavTrap() {
-	cout << "ScavTrap " << this->name << "is destroyed" << endl;
+	cout << "ScavTrap " << this->name << " is destroyed" << endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &inst): ClapTrap(inst){

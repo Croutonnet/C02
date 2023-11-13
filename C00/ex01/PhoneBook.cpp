@@ -1,6 +1,6 @@
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook(): index(0), nb_contact(0){
+PhoneBook::PhoneBook(): nb_contact(0), index(0){
 	std::cout << "Constructor called" << std::endl;
 }
 

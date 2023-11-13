@@ -17,11 +17,11 @@ ScavTrap::ScavTrap(string name) : ClapTrap(name), gateKeeper(false){
 }
 
 ScavTrap::~ScavTrap() {
-	cout << "ScavTrap" << this->name << "is destroyed" << endl;
+	cout << "ScavTrap " << this->name << " is destroyed" << endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap &inst): ClapTrap(inst){
-	cout << "Copiage de chose la" << endl;
+	cout << "Copy of ClapTrap" << endl;
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &rhs){

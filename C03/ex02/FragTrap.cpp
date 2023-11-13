@@ -17,7 +17,7 @@ FragTrap::FragTrap(string name) : ClapTrap(name){
 }
 
 FragTrap::~FragTrap() {
-	cout << "FragTrap " << this->name << "is destroyed" << endl;
+	cout << "FragTrap " << this->name << " is destroyed" << endl;
 }
 
 FragTrap::FragTrap(const FragTrap &inst): ClapTrap(inst){
