@@ -14,4 +14,6 @@ class Dog : public Animal{
 		Dog &operator=(const Dog &rhs);
 		void makeSound(void) const;
 		const string &getType(void) const;
+		void giveIdea(string idea);
+		string printIdea(unsigned int i);
 };

@@ -33,3 +33,11 @@ void Dog::makeSound(void) const{
 const string &Dog::getType(void) const{
 	return (this->type);
 }
+
+void Dog::giveIdea(string idea){
+	this->brains->setIdea(idea);
+}
+
+string Dog::printIdea(unsigned int i){
+	return this->brains->getIdea(i);
+}

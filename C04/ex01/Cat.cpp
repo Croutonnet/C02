@@ -33,3 +33,11 @@ void Cat::makeSound(void) const{
 const string &Cat::getType(void) const{
 	return (this->type);
 }
+
+void Cat::giveIdea(string idea){
+	this->brains->setIdea(idea);
+}
+
+string Cat::printIdea(unsigned int i){
+	return this->brains->getIdea(i);
+}
