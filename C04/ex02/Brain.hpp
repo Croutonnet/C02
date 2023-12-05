@@ -14,4 +14,6 @@ class Brain{
 		Brain(const Brain &inst);
 		Brain &operator=(const Brain &rhs);
 
+		void setIdea(string idea);
+		string getIdea(unsigned int i);
 };

@@ -36,7 +36,7 @@ void Brain::setIdea(string idea){
 }
 
 string Brain::getIdea(unsigned int i){
-	if (i > 99){
+	if (i > 99 || i < 0){
 		std::cout << "Le nombre d'idée est entre 0 inclus et 100 non inclus!" << std::endl;
 		return (NULL);
 	}

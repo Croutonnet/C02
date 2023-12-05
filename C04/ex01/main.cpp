@@ -4,18 +4,20 @@
 #include "Cat.hpp"
 #include "Dog.hpp"
 
+#define NBANIMAL 20
+
 int main(){
-	const Animal *meta[20];
-	for (int i = 0; i <= 10; i++){
+	const Animal *meta[NBANIMAL];
+	for (int i = 0; i < NBANIMAL / 2; i++){
 		meta[i] = new Cat();
 	}
-	for (int i = 10; i <= 20; i++){
+	for (int i = NBANIMAL / 2; i < NBANIMAL; i++){
 		meta[i] = new Dog();
 	}
-	for (int i = 0; i < 20; i++){
+	for (int i = 0; i < NBANIMAL; i++){
 		meta[i]->makeSound();
 	}
-	for (int i = 0; i <= 20; i++){
+	for (int i = 0; i < NBANIMAL; i++){
 		delete meta[i];
 	}
 	std::cout << std::endl << "TEST DE DEEP COPY" << std::endl << std::endl;
@@ -30,10 +32,9 @@ int main(){
 	for (unsigned int i = 0; i < 7; i++){
 		std::cout << moi->printIdea(i) << std::endl;
 	}
-	Cat *toi = moi;
+	Cat toi(*moi);
 	for (unsigned int i = 0; i < 7; i++){
-		std::cout << toi->printIdea(i) << " COPY" << std::endl;
+		std::cout << toi.printIdea(i) << " COPY" << std::endl;
 	}
 	delete moi;
-	delete toi;
 }

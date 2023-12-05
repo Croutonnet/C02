@@ -14,4 +14,6 @@ class Cat : public AAnimal{
 		Cat &operator=(const Cat &rhs);
 		void makeSound(void) const;
 		const string &getType(void) const;
+		void giveIdea(string idea);
+		string printIdea(unsigned int i);
 };

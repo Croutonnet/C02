@@ -1,12 +1,10 @@
 #include "Dog.hpp"
-#include "AAnimal.hpp"
-#include "Brain.hpp"
 #include <iostream>
 
 Dog::Dog(){
 	std::cout << "Default Dog constructor " << std::endl;
 	this->type = "Dog";
-	this->brains = new Brain;
+	this->brains = new Brain();
 }
 
 Dog::Dog(const Dog &inst){
@@ -20,9 +18,11 @@ Dog::~Dog(){
 }
 
 Dog& Dog::operator=(const Dog &rhs){
-	std::cout << "Dog operator = overide" << std::endl;
-	if (this != &rhs)
+	// std::cout << "Dog operator = overide" << std::endl;
+	if (this != &rhs){
 		this->type = rhs.type;
+		this->brains = new Brain(*rhs.brains);
+	}
 	return *this;
 }
 
@@ -32,4 +32,12 @@ void Dog::makeSound(void) const{
 
 const string &Dog::getType(void) const{
 	return (this->type);
+}
+
+void Dog::giveIdea(string idea){
+	this->brains->setIdea(idea);
+}
+
+string Dog::printIdea(unsigned int i){
+	return this->brains->getIdea(i);
 }

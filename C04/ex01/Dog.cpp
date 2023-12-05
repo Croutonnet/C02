@@ -3,13 +3,12 @@
 #include "Brain.hpp"
 #include <iostream>
 
-Dog::Dog(){
+Dog::Dog() : brains(new Brain()){
 	std::cout << "Default Dog constructor " << std::endl;
 	this->type = "Dog";
-	this->brains = new Brain;
 }
 
-Dog::Dog(const Dog &inst){
+Dog::Dog(const Dog &inst) : Animal(inst){
 	std::cout << "Copy Dog constructor " << std::endl;
 	*this = inst;
 }
@@ -20,9 +19,9 @@ Dog::~Dog(){
 }
 
 Dog& Dog::operator=(const Dog &rhs){
-	std::cout << "Dog operator = overide" << std::endl;
-	if (this != &rhs)
-		this->type = rhs.type;
+	// std::cout << "Dog operator = overide" << std::endl;
+	this->type = rhs.getType();
+	this->brains = new Brain(*rhs.brains);
 	return *this;
 }
 

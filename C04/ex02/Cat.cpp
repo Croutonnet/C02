@@ -1,15 +1,11 @@
 #include "Cat.hpp"
-#include "AAnimal.hpp"
-#include "Brain.hpp"
 #include <iostream>
 
-Cat::Cat(){
+Cat::Cat() : brains(new Brain()){
 	std::cout << "Default Cat constructor " << std::endl;
-	this->type = "Cat";
-	this->brains = new Brain;
 }
 
-Cat::Cat(const Cat &inst){
+Cat::Cat(const Cat &inst) : AAnimal(inst){
 	std::cout << "Copy Cat constructor " << std::endl;
 	*this = inst;
 }
@@ -20,9 +16,9 @@ Cat::~Cat(){
 }
 
 Cat& Cat::operator=(const Cat &rhs){
-	std::cout << "Cat operator = overide" << std::endl;
-	if (this != &rhs)
-		this->type = rhs.type;
+	// std::cout << "Cat operator = overide" << std::endl;
+	this->type = rhs.getType();
+	this->brains = new Brain(*rhs.brains);
 	return *this;
 }
 
@@ -32,4 +28,12 @@ void Cat::makeSound(void) const{
 
 const string &Cat::getType(void) const{
 	return (this->type);
+}
+
+void Cat::giveIdea(string idea){
+	this->brains->setIdea(idea);
+}
+
+string Cat::printIdea(unsigned int i){
+	return this->brains->getIdea(i);
 }
