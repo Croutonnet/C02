@@ -22,20 +22,13 @@ int	main(void){
 	cout << endl;
 	//Energy test
 	breon.guardGate();
-	breon.attack("Zahhh");
-	breon.attack("Zahhh");
-	breon.attack("Zahhh");
+	for (int i = 0; i < 50; i++){
+		breon.attack("Zahhh");
+	}
 	breon.beRepaired(1500000000);
+	breon.guardGate();
+	breon.beRepaired(150);
 	breon.attack("Zahhh");
 	breon.guardGate();
-	breon.attack("Zahhh");
-	breon.attack("Zahhh");
-	breon.attack("Zahhh");
-	breon.attack("Zahhh");
-	breon.attack("Zahhh");
-	breon.beRepaired(150);
-	breon.takeDamage(150);
-	breon.attack("Zahhh");
-	anthony.guardGate();
 
 }

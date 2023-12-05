@@ -3,11 +3,11 @@
 #include <iterator>
 
 Zombie::Zombie(){
-	std::cout << "Constructor called" << std::endl;
+	// std::cout << "Constructor called" << std::endl;
 }
 
 Zombie::Zombie(std::string name): name(name){
-	std::cout << "Constructor with name called" << std::endl;
+	// std::cout << "Constructor with name called" << std::endl;
 }
 
 Zombie::~Zombie(){

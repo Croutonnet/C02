@@ -11,9 +11,9 @@ FragTrap::FragTrap(){
 
 FragTrap::FragTrap(string name) : ClapTrap(name){
 	cout << "FragTrap " << this->name << " is born" << endl;
-	this->attackDamage = 20;
+	this->attackDamage = 30;
 	this->hitPoint = 100;
-	this->energyPoint = 50;
+	this->energyPoint = 100;
 }
 
 FragTrap::~FragTrap() {
@@ -36,6 +36,14 @@ void FragTrap::highFivesGuys(){
 	if (this->hitPoint == 0){
 		cout << "FragTrap " << this->name << " is dead, he can\'t ask for a high five :(" << endl;
 		return;
+	}
+	else if (this->energyPoint == 0){
+		cout << "FragTrap " << this->name << " is fatiguer, he can\'t ask for a high five :(" << endl;
+		return;
+	}
+	else{
+		cout << "FragTrap " << this->name << " is asking for a high five!!" << endl;
+		this->energyPoint--;
 	}
 }
 

@@ -9,11 +9,23 @@ int	main(int argc, char **argv){
 	}
 	std::ifstream file;
 	std::string search = argv[2];
+	if (search.length() == 0){
+		std::cout << "Les arguments vides ne sont pas valide" << std::endl;
+		return (0);
+	}
 	std::string replace = argv[3];
+	if (replace.length() == 0){
+		std::cout << "Les arguments vides ne sont pas valide" << std::endl;
+		return (0);
+	}
 	std::string outputName;
 	std::ofstream res;
 	std::string line;
 	outputName = argv[1];
+	if (outputName.length() == 0){
+		std::cout << "Les arguments vides ne sont pas valide" << std::endl;
+		return (0);
+	}
 	outputName += ".replace";
 	file.open(argv[1], std::ios::in);
 	res.open(outputName, std::ios::out);

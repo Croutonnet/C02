@@ -7,11 +7,11 @@ class Contact
 		Contact();
 		Contact(std::string fn, std::string ln, std::string nn, std::string pn, std::string ds);
 		~Contact();
-		const std::string GetFirstName(void);
-		const std::string GetLastName(void);
-		const std::string GetNickName(void);
-		const std::string GetPhoneNumber(void);
-		const std::string GetDarkestSecret(void);
+		const std::string &GetFirstName(void) const;
+		const std::string &GetLastName(void) const;
+		const std::string &GetNickName(void) const;
+		const std::string &GetPhoneNumber(void) const;
+		const std::string &GetDarkestSecret(void) const;
 
 	private:
 		std::string firstName;

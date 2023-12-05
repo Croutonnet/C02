@@ -7,6 +7,7 @@ int	main(void){
 	FragTrap breon("Breon");
 
 	//HP test
+	anthony.highFivesGuys();
 	anthony.takeDamage(1);
 	anthony.takeDamage(1);
 	anthony.highFivesGuys();
@@ -23,17 +24,11 @@ int	main(void){
 	cout << endl;
 	//Energy test
 	breon.highFivesGuys();
-	breon.attack("Zahhh");
-	breon.attack("Zahhh");
-	breon.attack("Zahhh");
+	for (int i = 0; i < 100; i++){
+		breon.attack("Zahhh");
+	}
 	breon.beRepaired(1500000000);
-	breon.attack("Zahhh");
 	breon.highFivesGuys();
-	breon.attack("Zahhh");
-	breon.attack("Zahhh");
-	breon.attack("Zahhh");
-	breon.attack("Zahhh");
-	breon.attack("Zahhh");
 	breon.beRepaired(150);
 	breon.takeDamage(150);
 	breon.attack("Zahhh");
