@@ -45,10 +45,12 @@ void ScavTrap::guardGate(){
 	if (this->gateKeeper == true){
 		cout << "ScavTrap " << this->name << " Gate keep is now offline" << endl;
 		this->gateKeeper = false;
+		this->energyPoint--;
 	}
 	else{
 		cout << "ScavTrap " << this->name << " Gate keep is now online" << endl;
 		this->gateKeeper = true;
+		this->energyPoint--;
 	}
 }
 
