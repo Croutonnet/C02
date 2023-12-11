@@ -2,19 +2,19 @@
 #include <iostream>
 
 AMateria::AMateria(){
-	std::cout << "Default AMateria constructor " << std::endl;
+	// std::cout << "Default AMateria constructor " << std::endl;
 }
 
 AMateria::AMateria(std::string const &type) : type(type){
-	std::cout << "AMateria with string Constructor called" << std::endl;
+	// std::cout << "AMateria with string Constructor called" << std::endl;
 }
 
 AMateria::~AMateria(){
-	std::cout << "AMateria destructor" << std::endl;
+	// std::cout << "AMateria destructor" << std::endl;
 }
 
 AMateria::AMateria(const AMateria &inst){
-	std::cout << "Copy AMateria constructor " << std::endl;
+	// std::cout << "Copy AMateria constructor " << std::endl;
 	*this = inst;
 }
 

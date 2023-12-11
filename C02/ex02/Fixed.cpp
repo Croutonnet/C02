@@ -3,11 +3,11 @@
 #include <ostream>
 
 Fixed::Fixed(): number(0){
-	std::cout << "Default Fixed constructor " << std::endl;
+	// std::cout << "Default Fixed constructor " << std::endl;
 }
 
 Fixed::Fixed(const Fixed &inst){
-	std::cout << "Copy Fixed constructor " << std::endl;
+	// std::cout << "Copy Fixed constructor " << std::endl;
 	*this = inst;
 }
 
@@ -20,7 +20,7 @@ Fixed::Fixed(const float value){
 }
 
 Fixed::~Fixed(){
-	std::cout << "Fixed destructor" << std::endl;
+	// std::cout << "Fixed destructor" << std::endl;
 }
 
 Fixed& Fixed::operator=(const Fixed &rhs){

@@ -15,7 +15,7 @@ Animal::~Animal() {
 }
 
 Animal& Animal::operator=(const Animal &rhs) {
-	std::cout << "Animal operator = overide" << std::endl;
+	// std::cout << "Animal operator = overide" << std::endl;
 	if (this != &rhs)
 		this->type = rhs.type;
 	return *this;

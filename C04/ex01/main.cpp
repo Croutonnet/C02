@@ -4,7 +4,7 @@
 #include "Cat.hpp"
 #include "Dog.hpp"
 
-#define NBANIMAL 20
+#define NBANIMAL 4
 
 int main(){
 	const Animal *meta[NBANIMAL];

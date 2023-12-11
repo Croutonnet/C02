@@ -16,7 +16,7 @@ Brain::~Brain(){
 }
 
 Brain& Brain::operator=(const Brain &rhs){
-	std::cout << "Brain operator = overide" << std::endl;
+	// std::cout << "Brain operator = overide" << std::endl;
 	if (this != &rhs){
 		for (int i = 0; i < 100; i++){
 			this->ideas[i] = rhs.ideas[i];

@@ -22,7 +22,7 @@ WrongAnimal& WrongAnimal::operator=(const WrongAnimal &rhs) {
 }
 
 void	WrongAnimal::makeSound(void) const{
-	std::cout << "NON" << std::endl;
+	std::cout << "MAUVAIS NANIMAL" << std::endl;
 }
 
 const string &WrongAnimal::getType(void) const{

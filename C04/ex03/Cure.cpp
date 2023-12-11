@@ -2,15 +2,15 @@
 #include "AMateria.hpp"
 
 Cure::Cure() : AMateria("cure"){
-	std::cout << "Cure Constructor called" << std::endl;
+	// std::cout << "Cure Constructor called" << std::endl;
 }
 
 Cure::~Cure(){
-	std::cout << "Cure Destructor called" << std::endl;
+	// std::cout << "Cure Destructor called" << std::endl;
 }
 
 Cure::Cure(const Cure &inst) : AMateria(inst){
-	std::cout << "Copy Cure Called" << std::endl;
+	// std::cout << "Copy Cure Called" << std::endl;
 	*this = inst;
 }
 

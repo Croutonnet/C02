@@ -3,15 +3,15 @@
 #include "ICharacter.hpp"
 
 Ice::Ice() : AMateria("ice"){
-	std::cout << "Ice Constructor called" << std::endl;
+	// std::cout << "Ice Constructor called" << std::endl;
 }
 
 Ice::~Ice(){
-	std::cout << "Ice Destructor called" << std::endl;
+	// std::cout << "Ice Destructor called" << std::endl;
 }
 
 Ice::Ice(const Ice &inst) : AMateria(inst){
-	std::cout << "Copy Ice Called" << std::endl;
+	// std::cout << "Copy Ice Called" << std::endl;
 	*this = inst;
 }
 

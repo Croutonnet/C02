@@ -15,14 +15,14 @@ WrongAnimal::~WrongAnimal() {
 }
 
 WrongAnimal& WrongAnimal::operator=(const WrongAnimal &rhs) {
-	std::cout << "WrongAnimal operator = overide" << std::endl;
+	// std::cout << "WrongAnimal operator = overide" << std::endl;
 	if (this != &rhs)
 		this->type = rhs.type;
 	return *this;
 }
 
 void	WrongAnimal::makeSound(void) const{
-	std::cout << "NON" << std::endl;
+	std::cout << "MAUVAIS NANIMAL" << std::endl;
 }
 
 const string &WrongAnimal::getType(void) const{
