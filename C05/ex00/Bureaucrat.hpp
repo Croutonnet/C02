@@ -14,20 +14,21 @@ class	Bureaucrat{
 		class	GradeTooLowException : public std::exception{
 			public:
 				const char* what() const throw() {
-					return ("Your grade is low high, it must be between 1 and 150");
+					return ("Your grade is too low, it must be between 1 and 150");
 				}
 		};
 		Bureaucrat(unsigned int _grade, const std::string _name);
 		~Bureaucrat();
 		Bureaucrat(const Bureaucrat &inst);
 		Bureaucrat	&operator=(const Bureaucrat &rhs);
-		const std::string	getName();
-		unsigned int		getGrade();
+		const std::string	getName() const;
+		unsigned int		getGrade() const;
 		void				incrementGrade();
 		void				desincrementGrade();
 	private:
 		unsigned int		grade;
 		const std::string	name;
 };
+
 std::ostream &operator<<(std::ostream &o, Bureaucrat const &inst);
 #endif
