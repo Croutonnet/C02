@@ -21,16 +21,17 @@ class	AForm{
 				}
 		};
 		AForm(string _name, unsigned int _gradeSign, unsigned int _gradeExecute);
-		~AForm();
+		virtual ~AForm();
 		AForm(const AForm &inst);
-		AForm& operator=(const AForm &rhs);
+		virtual void	beSigned(Bureaucrat &bur) = 0;
 		const string		getName() const;
 		bool				getSigned() const;
-		unsigned int	getGradeSign() const;
-		unsigned int	getGradeExecute() const;
-		void			beSigned(Bureaucrat &bur);
+		unsigned int		getGradeSign() const;
+		unsigned int		getGradeExecute() const;
 
-	private:
+		AForm& operator=(const AForm &rhs);
+		
+	protected:
 		const string name;
 		bool sign;
 		const unsigned int gradeSign;
