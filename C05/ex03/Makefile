@@ -2,7 +2,7 @@
 #                                VARIABLES                                     #
 #------------------------------------------------------------------------------#
 
-NAME		=	No,_you_need_form_28B,_not_28C...
+NAME		=	At_least_this_beats_coffee-making
 
 # Style
 BOLD		=	\033[1m
@@ -34,6 +34,7 @@ SRCS		=	main.cpp\
 				ShrubberyCreationForm.cpp\
 				RobotomyRequestForm.cpp\
 				PresidentialPardonForm.cpp\
+				Intern.cpp
 
 OBJS_DIR	=	obj/
 OBJS_LST	=	$(patsubst %.cpp, %.o, $(SRCS))
