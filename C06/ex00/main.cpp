@@ -27,7 +27,27 @@ bool	checkIfSpecial(string input){
 }
 
 void	convertSpecial(string input){
-	
+	cout << "char: impossible" << endl;
+	cout << "int: impossible" << endl;
+	if (input == "-inff"){
+		cout << "float: -inff" << endl;
+		cout << "double: -inf" << endl;
+	}else if (input == "+inff"){
+		cout << "float: +inff" << endl;
+		cout << "double: +inf" << endl;
+	}else if (input == "-inf"){
+		cout << "float: -inff" << endl;
+		cout << "double: -inf" << endl;
+	}else if (input == "+inff"){
+		cout << "float: +inff" << endl;
+		cout << "double: +inf" << endl;
+	}else if (input == "nanf"){
+		cout << "float: nanf" << endl;
+		cout << "double: nan" << endl;
+	}else if (input == "nan"){
+		cout << "float: nanf" << endl;
+		cout << "double: nan" << endl;
+	}
 }
 
 //--------------------------------FLOAT--------------------------
@@ -192,7 +212,7 @@ int main(int argc, char **argv){
 		return (cout << "Bad arguments" << endl, 1);
 	}
 	if (checkIfSpecial(argv[1]) == true){
-		convertSpecial();
+		convertSpecial(argv[1]);
 		return (0);
 	}
 	else if (checkIfFloat(argv[1]) == true){
