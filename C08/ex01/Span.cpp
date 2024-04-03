@@ -97,3 +97,20 @@ int Span::longestSpan() const{
 		return 0;
 	return big;
 }
+
+void	Span::addAllInBetween(int nb1, int nb2){
+	int i;
+	int k;
+	if (nb1 > nb2){
+		i = nb2;
+		k = nb1;
+	}
+	else{
+		i = nb1;
+		k = nb2;
+	}
+	while (i <= k) {
+		addNumber(i);
+		i++;
+	}
+}
