@@ -2,11 +2,11 @@
 #include <stdexcept>
 
 Intern::Intern(){
-	cout << "Default Intern Constructor Called" << endl;
+	cout << BLUE "Default Intern Constructor Called" RESET << endl;
 }
 
 Intern::~Intern(){
-	cout << "Default Intern Destructor Called" << endl;
+	cout << BLUE "Default Intern Destructor Called" RESET << endl;
 }
 
 Intern::Intern(const Intern &inst){

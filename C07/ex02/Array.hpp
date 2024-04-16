@@ -6,7 +6,7 @@ using std::string;
 using std::cout;
 using std::endl;
 
-template<class T>
+template<typename T>
 class	Array{
 	public:
 		Array<T>();
@@ -17,7 +17,7 @@ class	Array{
 		T&	operator[](const unsigned int i) const;
 		const unsigned int &size() const;
 	private:
-	T			*_array;
+	T				*_array;
 	const unsigned	int _size;
 };
 

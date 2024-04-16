@@ -2,7 +2,7 @@
 #include <exception>
 int	main(void){
 	{
-		Span arr(10000);
+		Span arr(1000);
 		try{
 			for (unsigned int i = 1; i < arr.size(); i++){
 				srand((unsigned)time(NULL) + rand());

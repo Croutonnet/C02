@@ -4,7 +4,7 @@
 int	main(void){
 	try {
 		Form form("mamadou", 2, 2);
-		Form form1("toi mem", 2, 2);
+		Form form1("toi meme", 2, 2);
 		Form form2("ok", 2, 2);
 		Bureaucrat toi(1, "toi");
 		Bureaucrat moi(2, "moi");

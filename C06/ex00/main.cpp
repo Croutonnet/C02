@@ -76,7 +76,9 @@ void	floatToChar(float nb){
 
 void	floatToInt(float nb){
 	cout << "int: ";
-	if (nb > INT_MAX || nb < INT_MIN){
+	try {
+		std::stoi(std::to_string(nb));
+	} catch(std::exception &e){
 		cout << "impossible" << endl;
 		return ;
 	}
@@ -85,7 +87,7 @@ void	floatToInt(float nb){
 
 void	floatToDouble(float nb, string input){
 	cout << "double: ";
-	if (nb > std::numeric_limits<double>::max() || nb < std::numeric_limits<double>::min()){
+	if (nb > std::numeric_limits<double>::max() || nb < -std::numeric_limits<double>::max()){
 		cout << "impossible" << endl;
 		return ;
 	}
@@ -131,7 +133,7 @@ void	doubleToInt(double nb){
 
 void	doubleToFloat(double nb, string input){
 	cout << "float: ";
-	if (nb > std::numeric_limits<float>::max() || nb < std::numeric_limits<float>::min()){
+	if (nb > std::numeric_limits<float>::max() || nb < -std::numeric_limits<float>::max()){
 		cout << "impossible" << endl;
 		return ;
 	}

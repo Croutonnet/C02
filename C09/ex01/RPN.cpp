@@ -20,17 +20,40 @@ RPN &RPN::operator=(const RPN &rhs){
 }
 
 int RPN::solve(string line){
-	int res = 0;
 	int i = 0;
 
 	while(line[i]){
 		if (std::isdigit(line[i]) == true){
 			patante.push(std::stoi(&line[i]));
-			cout << "DANS LE PUSH " << std::stoi(&line[i]) << endl;
+		}
+		if (line[i] == '+'){
+			int tempRes = patante.top();
+			patante.pop();
+			tempRes = tempRes + patante.top();
+			patante.pop();
+			patante.push(tempRes);
+		}else if (line[i] == '-'){
+			int tempRes = patante.top();
+			patante.pop();
+			tempRes = tempRes - patante.top();
+			patante.pop();
+			patante.push(tempRes);
+		}else if (line[i] == '*'){
+			int tempRes = patante.top();
+			patante.pop();
+			tempRes = tempRes * patante.top();
+			patante.pop();
+			patante.push(tempRes);
+		}else if (line[i] == '/'){
+			int tempRes = patante.top();
+			patante.pop();
+			tempRes = tempRes / patante.top();
+			patante.pop();
+			patante.push(tempRes);
 		}
 		if (line.find(' ', i) == string::npos)
 			break;
 		i++;
 	}
-	return res;
+	return patante.top();
 }

@@ -66,6 +66,7 @@ dir:
 clean:
 	@printf "💣 $(RED)Removing $(NAME) objects...$(RESET) 💥\n"
 	@$(RM) $(OBJS_DIR)
+	@$(RM) arbres_shrubbery
 
 # Removes objects and executables
 fclean: clean

@@ -1,11 +1,11 @@
 #include "PresidentialPardonForm.hpp"
 
 PresidentialPardonForm::PresidentialPardonForm(const string &target): AForm("PresidentialPardonForm", 25, 5), target(target){
-	cout << "Default PresidentialPardonForm Constructor Called" << endl;
+	cout << BLUE "Default PresidentialPardonForm Constructor Called" RESET << endl;
 }
 
 PresidentialPardonForm::~PresidentialPardonForm(){
-	cout << "Default PresidentialPardonForm Destructor Called" << endl;
+	cout << BLUE "Default PresidentialPardonForm Destructor Called" RESET << endl;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &inst){

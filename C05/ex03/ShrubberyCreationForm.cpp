@@ -2,11 +2,11 @@
 #include <fstream>
 
 ShrubberyCreationForm::ShrubberyCreationForm(const string &target): AForm("ShrubberyForm", 145, 137), target(target){
-	cout << "ShrubberyCreationForm Constructor Called" << endl;
+	cout << BLUE "ShrubberyCreationForm Constructor Called" RESET << endl;
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm(){
-	cout << "Default ShrubberyCreationForm Destructor Called" << endl;
+	cout << BLUE "Default ShrubberyCreationForm Destructor Called" RESET << endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &inst){

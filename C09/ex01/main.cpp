@@ -7,7 +7,7 @@ int main(int argc, char **argv){
 		return 2;
 	RPN test;
 	try{
-		test.solve(argv[1]);
+		cout << test.solve(argv[1]) << endl;
 	}catch(std::exception &e){
 		cout << e.what() << endl;
 	}

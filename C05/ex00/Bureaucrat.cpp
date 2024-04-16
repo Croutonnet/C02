@@ -15,7 +15,7 @@ Bureaucrat::~Bureaucrat(){
 	std::cout << "Bureaucrat " << name << " with grade " << grade << " is destructed" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &inst){
+Bureaucrat::Bureaucrat(const Bureaucrat &inst): name(inst.name){
 	*this = inst;
 }
 

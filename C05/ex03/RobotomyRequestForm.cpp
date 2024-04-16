@@ -1,11 +1,11 @@
 #include "RobotomyRequestForm.hpp"
 
 RobotomyRequestForm::RobotomyRequestForm(const string &target): AForm("RobotomyRequestForm", 72, 45), target(target){
-	cout << "RobotomyRequestForm Constructor Called" << endl;
+	cout << BLUE "RobotomyRequestForm Constructor Called" RESET << endl;
 }
 
 RobotomyRequestForm::~RobotomyRequestForm(){
-	cout << "Default RobotomyRequestForm Destructor Called" << endl;
+	cout << BLUE "Default RobotomyRequestForm Destructor Called" RESET << endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &inst){
