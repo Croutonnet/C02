@@ -2,7 +2,7 @@
 #                                VARIABLES                                     #
 #------------------------------------------------------------------------------#
 
-NAME		=	RPN
+NAME		=	PmergeMe
 
 # Style
 BOLD		=	\033[1m
@@ -29,7 +29,7 @@ RM			=	rm -rf
 
 # Sources are all .c files
 SRCS		=	main.cpp\
-				RPN.cpp\
+				PmergeMe.cpp\
 
 OBJS_DIR	=	bin/
 OBJS_LST	=	$(patsubst %.cpp, %.o, $(SRCS))
@@ -73,4 +73,4 @@ re: fclean all
 	$(GREEN) ✔️$(RESET)"
 
 run: re
-	@./$(NAME) "8 9 * 9 - 9 - 9 - 4 - 1 +"
+	@./$(NAME) input.txt

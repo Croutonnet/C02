@@ -1,2 +1,2 @@
-C07 ex01 Fonctionne mesemble pas
-C07 ex02 Compile pas
+Fais des pair et le lonely tout seul si c'est impaire
+Le plus gros de pair en deuxieme de la pair (emplacement)

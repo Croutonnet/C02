@@ -24,5 +24,6 @@ class	RPN{
 		RPN& operator=(const RPN &rhs);
 		int solve(string line);
 	private:
-		std::stack<int> patante;
+		std::stack<int> stack;
+		void	calculate(char op);
 };

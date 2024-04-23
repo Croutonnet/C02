@@ -38,7 +38,7 @@ void	convertSpecial(string input){
 	}else if (input == "-inf"){
 		cout << "float: -inff" << endl;
 		cout << "double: -inf" << endl;
-	}else if (input == "+inff"){
+	}else if (input == "+inf"){
 		cout << "float: +inff" << endl;
 		cout << "double: +inf" << endl;
 	}else if (input == "nanf"){
