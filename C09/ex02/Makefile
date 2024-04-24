@@ -73,4 +73,4 @@ re: fclean all
 	$(GREEN) ✔️$(RESET)"
 
 run: re
-	@./$(NAME) input.txt
+	@./$(NAME) ""1 3 5 2 6 2 78 2 3""
