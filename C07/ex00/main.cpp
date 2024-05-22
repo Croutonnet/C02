@@ -6,8 +6,8 @@ int	main(void){
 		int nb2 = 5;
 		char a = 'a';
 		char c = 'c';
-		std::string str1 = "string 1 mouda";
-		std::string str2 = "string 2 pappy";
+		std::string str1 = "string a 1 mouda";
+		std::string str2 = "string e 2 pappy";
 
 		cout << "--------AVANT----------" << endl;
 		cout << "A: " << a << "	C: " << c << endl;

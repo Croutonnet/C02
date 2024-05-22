@@ -1,10 +1,15 @@
 #include "easyfind.hpp"
+#include <vector>
 
 int main(void){
-	int tab[] = {1, 2, 3, 2, 5, 6, 4, 8, 4, 10, 11, 22, 12 , 44 , 66};
+	std::vector<int> vec;
+	for(int i = 0; i < 15; i++){
+		vec.push_back(i);
+	}
 	try{
-		cout << easyfind(tab, 4) << endl;
+		std::vector<int>::iterator it = easyfind(vec, -1);
+		cout << *it << endl;
 	}catch(std::exception &e){
-		cout << "ah bah non" << endl;
+		cout << e.what() << endl;
 	}
 }

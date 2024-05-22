@@ -1,5 +1,6 @@
 #include "Span.hpp"
 #include <exception>
+#include <vector>
 int	main(void){
 	{
 		Span arr(1000);
@@ -15,13 +16,17 @@ int	main(void){
 		}
 	}
 	{
-		Span arr(5);
 		try{
-			arr.addAllInBetween(1, 5);
+			Span arr(10);
+			std::vector<int> testVector;
+			for (int i = 0; i < 10; i++){
+				testVector.push_back(i);
+			}
+			arr.addMultiplesNumbers(testVector);
 			cout << "SHORTY: " << arr.shortestSpan() << endl;
 			cout << "LONGY: " << arr.longestSpan() << endl;
 		}catch(std::exception &e){
-			cout << "Ah merde" << endl;
+			cout << e.what() << endl;
 		}
 	}
 }

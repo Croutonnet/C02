@@ -15,7 +15,7 @@ class	Span{
 		Span& operator=(const Span &rhs);
 
 		void			addNumber(int nb);
-		void			addAllInBetween(int nb1, int nb2);
+		void			addMultiplesNumbers(std::vector<int> toAdd);
 		int				shortestSpan() const;
 		int				longestSpan() const;
 		void			print();
@@ -23,5 +23,5 @@ class	Span{
 	private:
 		unsigned int	_size;
 		unsigned int	currentSize;
-		int				*_arr;
+		std::vector<int> _vector;
 };

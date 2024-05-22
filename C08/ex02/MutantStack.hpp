@@ -7,7 +7,8 @@
 using std::cout;
 using std::endl;
 using std::string;
-template<class T>
+
+template<typename  T>
 class	MutantStack: public std::stack<T>{
 	public:
 		MutantStack(){cout << "Default Constructor" << endl;};

@@ -1,2 +1,0 @@
-Fais des pair et le lonely tout seul si c'est impaire
-Le plus gros de pair en deuxieme de la pair (emplacement)

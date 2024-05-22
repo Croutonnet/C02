@@ -1,18 +1,18 @@
 #include <stdexcept>
 template<typename T>
 Array<T>::Array(): _array(NULL), _size(1){
-	cout << "Default constructor" << endl;
+	// cout << "Default constructor" << endl;
 }
 
 template<typename T>
 Array<T>::Array(unsigned int n) : _size(n){
-	cout << "Autre contructor" << endl;
+	// cout << "Autre contructor" << endl;
 	_array = new T[n];
 }
 
 template<typename T>
 Array<T>::~Array(){
-	cout << "Default destructor" << endl;
+	// cout << "Default destructor" << endl;
 	delete [] _array;
 }
 
